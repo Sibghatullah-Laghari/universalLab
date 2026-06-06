@@ -1,108 +1,322 @@
- 1. Introduction
-1.1 Purpose
-This project aims to develop a lightweight, scalable barcode-based sample tracking system for clinical laboratories. The system generates unique barcodes for each sample and provides functionality to scan and decode them for processing.
+# Software Requirements Specification (SRS)
 
-1.2 Scope
-The initial version focuses on barcode generation and scanning using a console-based Java application. It is designed for:
+# Universal Laboratory Barcode Tracking System
 
-Self-learning and software engineering practice
+---
 
-Customization and deployment for local clients (e.g., pathology labs in Pakistan)
+# 1. Project Overview
 
-1.3 Intended Audience
+## 1.1 Project Objective
 
-Individual developers and students
+The Universal Laboratory Barcode Tracking System is a lightweight Java application designed to simplify laboratory sample identification through barcode technology. The system creates unique barcode images from sample information and enables barcode decoding to retrieve the original data when required.
 
-Freelancers providing lab software solutions
+The project serves both as a practical software engineering exercise and as a foundation for developing commercial laboratory solutions for clinics, diagnostic centers, and pathology laboratories.
 
-Small and medium-sized clinics and labs
+---
 
-1.4 Definitions
+## 1.2 Project Boundaries
 
-Sample: Any biological material collected for testing (e.g., blood, urine)
+The current release focuses on the core barcode workflow and includes:
 
-Barcode: A machine-readable representation of sample data
+* Barcode generation from laboratory sample information
+* Barcode image storage in PNG format
+* Barcode decoding from image files
+* Command-line user interaction
+* Modular architecture for future expansion
 
-ZXing: Open-source barcode image processing library
+Features such as databases, graphical interfaces, authentication, and reporting modules are planned for future versions.
 
-🧩 2. Overall Description
-2.1 Product Perspective
-This is a standalone system built in Java with Maven and ZXing. It is the base module of a full-featured lab management system.
+---
 
-2.2 Product Features
+## 1.3 Target Users
 
-Generate barcode images based on sample and patient info
+The application is intended for:
 
-Save barcodes to .png format
+### Software Developers
 
-Decode barcode images and extract text
+Developers who wish to learn barcode technologies, Java application design, and Maven-based projects.
 
-Console-based UI for initial version
+### Students
 
-Easily customizable and extendable
+Students studying software engineering, information systems, or healthcare informatics.
 
-2.3 User Classes and Characteristics
+### Freelancers
 
-Lab Assistant: Uses the app to label and scan samples
+Independent developers building custom software solutions for laboratories and healthcare organizations.
 
-Developer/Admin: Manages setup, adds features, and deploys
+### Laboratories and Clinics
 
-2.4 Operating Environment
+Small and medium-sized healthcare facilities seeking an affordable sample tracking solution.
 
-OS: Windows/Linux
+---
 
-Java Version: 17+
+## 1.4 Terminology
 
-IDE: IntelliJ IDEA
+| Term              | Description                                                       |
+| ----------------- | ----------------------------------------------------------------- |
+| Laboratory Sample | Biological material collected for diagnostic analysis             |
+| Sample ID         | Unique identifier assigned to a laboratory specimen               |
+| Barcode           | Encoded machine-readable representation of data                   |
+| Barcode Image     | PNG image containing encoded sample information                   |
+| ZXing             | Open-source Java library used for barcode generation and decoding |
+| Decoder           | Component responsible for reading barcode information             |
+| Encoder           | Component responsible for generating barcode images               |
 
-Memory: < 256MB usage (runs on low-end machines)
+---
 
-📋 3. Functional Requirements
-ID	Description
-FR1	The system shall accept sample data (e.g., Patient Name, Test Type, Sample ID)
-FR2	The system shall generate a barcode image and save it to the disk
-FR3	The system shall scan a saved barcode image and print decoded text
-FR4	The system shall allow basic logging of events (optional)
+# 2. System Description
 
-🚀 4. Non-Functional Requirements
-Category	Requirement
-Performance	Barcode generation and decoding should complete in <1 second
-Usability	Simple command-line interface
-Maintainability	Modular code structure
-Scalability	Ready to expand with GUI, DB, and API features
-Portability	No platform-specific dependencies
-Security	(Planned) Basic data validation and file access safety
+## 2.1 System Context
 
-🖼️ 5. System Models
-(Diagrams can be added later, for now just planning)
+The application operates as a standalone desktop utility developed using Java and Maven.
 
-Use Case Diagram (optional)
+It represents the first stage of a larger laboratory information management ecosystem and can later be integrated with databases, web services, or desktop interfaces.
 
-Class Diagram (BarcodeGenerator, BarcodeScanner, Main)
+---
 
-Flowchart (Input → Generate → Save → Scan → Decode)
+## 2.2 Core Capabilities
 
-🔧 6. Technologies Used
-Component	Technology
-Language	Java 17
-Build Tool	Maven
-Barcode Engine	ZXing (core + JavaSE)
-IDE	IntelliJ IDEA
-(Planned) GUI	JavaFX or Swing
-(Planned) DB	MySQL or SQLite
+The system provides the following capabilities:
 
-🌱 7. Future Scope
-Add JavaFX GUI for ease of use
+### Barcode Creation
 
-Integrate MySQL to store sample records
+Generate barcode images from laboratory sample information.
 
-Add patient management and test tracking
+### Barcode Storage
 
-Implement user login and access control
+Save generated barcode images as PNG files for printing or electronic record keeping.
 
-Add PDF report generation
+### Barcode Reading
 
-Export/Import data via Excel
+Decode previously generated barcode images and retrieve the stored information.
 
-Deploy as offline desktop app for labs
+### Console Interaction
 
+Provide a simple command-line interface for executing operations.
+
+### Extensibility
+
+Support future integration with databases, user interfaces, and external systems.
+
+---
+
+## 2.3 User Roles
+
+### Laboratory Technician
+
+Responsibilities:
+
+* Create sample labels
+* Generate barcodes
+* Scan and verify samples
+* Retrieve encoded sample information
+
+### System Administrator / Developer
+
+Responsibilities:
+
+* Configure the application
+* Maintain the codebase
+* Add new features
+* Deploy customized versions for clients
+
+---
+
+## 2.4 Deployment Environment
+
+| Component           | Specification                            |
+| ------------------- | ---------------------------------------- |
+| Operating System    | Windows or Linux                         |
+| Java Runtime        | Java 17 or newer                         |
+| Build System        | Maven                                    |
+| Development IDE     | IntelliJ IDEA                            |
+| Memory Requirement  | Less than 256 MB RAM                     |
+| Storage Requirement | Minimal local storage for barcode images |
+
+---
+
+# 3. Functional Requirements
+
+| Requirement ID | Requirement Description                                                               |
+| -------------- | ------------------------------------------------------------------------------------- |
+| FR-01          | The system shall accept sample-related information as user input.                     |
+| FR-02          | The system shall generate a barcode representing the supplied data.                   |
+| FR-03          | The system shall save generated barcode images in PNG format.                         |
+| FR-04          | The system shall load barcode images from local storage.                              |
+| FR-05          | The system shall decode barcode content and display the original information.         |
+| FR-06          | The system shall validate input before barcode generation.                            |
+| FR-07          | The system may record operational events for troubleshooting and monitoring purposes. |
+
+---
+
+# 4. Quality Attributes and Non-Functional Requirements
+
+## Performance
+
+* Barcode generation should complete within one second under normal conditions.
+* Barcode decoding should complete within one second for standard image sizes.
+
+## Usability
+
+* The application should provide straightforward command-line commands.
+* User interactions should require minimal technical knowledge.
+
+## Reliability
+
+* Generated barcodes should be readable by the system without data loss.
+* Invalid inputs should be handled gracefully.
+
+## Maintainability
+
+* Code should remain modular and easy to extend.
+* Components should follow clear separation of responsibilities.
+
+## Portability
+
+* The application should operate consistently on Windows and Linux systems.
+* No platform-specific dependencies should be required.
+
+## Scalability
+
+* Architecture should support future integration with:
+
+  * Databases
+  * Desktop interfaces
+  * Web services
+  * Laboratory management modules
+
+## Security
+
+Future versions may include:
+
+* Input sanitization
+* User authentication
+* Role-based access control
+* Secure file handling
+
+---
+
+# 5. System Design Planning
+
+The following design artifacts may be introduced during future development phases.
+
+## Use Case Diagram
+
+Illustrates interactions between users and the barcode system.
+
+Potential use cases include:
+
+* Generate Barcode
+* Scan Barcode
+* Retrieve Sample Information
+* Manage Sample Records
+
+---
+
+## Class Diagram
+
+Example classes:
+
+* MainApplication
+* BarcodeGenerator
+* BarcodeDecoder
+* SampleRecord
+* FileManager
+
+---
+
+## Workflow Diagram
+
+Typical processing sequence:
+
+```text
+User Input
+      ↓
+Data Validation
+      ↓
+Barcode Generation
+      ↓
+PNG File Storage
+      ↓
+Barcode Retrieval
+      ↓
+Barcode Decoding
+      ↓
+Display Sample Information
+```
+
+---
+
+# 6. Technology Stack
+
+| Layer                | Technology    |
+| -------------------- | ------------- |
+| Programming Language | Java 17       |
+| Build Tool           | Maven         |
+| Barcode Processing   | ZXing Core    |
+| Image Processing     | ZXing JavaSE  |
+| IDE                  | IntelliJ IDEA |
+| Version Control      | Git & GitHub  |
+
+### Planned Technologies
+
+| Feature             | Technology     |
+| ------------------- | -------------- |
+| Desktop GUI         | JavaFX / Swing |
+| Database            | MySQL / SQLite |
+| REST Services       | Spring Boot    |
+| Reporting           | PDF Libraries  |
+| Spreadsheet Support | Apache POI     |
+
+---
+
+# 7. Future Enhancements
+
+Several improvements are planned for future releases:
+
+### User Interface
+
+* JavaFX desktop application
+* Improved user experience
+* Visual barcode management
+
+### Data Management
+
+* MySQL or SQLite integration
+* Persistent sample record storage
+
+### Laboratory Operations
+
+* Patient registration
+* Test request management
+* Sample lifecycle tracking
+
+### Security Features
+
+* User authentication
+* Password management
+* Access control mechanisms
+
+### Reporting
+
+* PDF report generation
+* Printable barcode labels
+* Summary reports
+
+### Data Exchange
+
+* Excel import and export
+* CSV support
+* Backup and restore functionality
+
+### Deployment
+
+* Offline desktop application package
+* Client-ready installation setup
+* Support for local laboratory environments
+
+---
+
+# 8. Conclusion
+
+The Universal Laboratory Barcode Tracking System provides a simple but practical framework for barcode-based laboratory sample identification. By leveraging Java 17, Maven, and ZXing, the application delivers a lightweight and portable solution while maintaining flexibility for future enhancements such as databases, graphical interfaces, reporting tools, and laboratory information management capabilities.
