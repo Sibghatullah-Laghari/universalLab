@@ -2,7 +2,7 @@
 
 A compact Java application for creating and reading laboratory sample barcodes. The system uses the ZXing barcode library to demonstrate how patient and sample information can be encoded into barcode images and later retrieved for laboratory workflows.
 
-This project is intended as a simple foundation that can be extended into a complete laboratory information or sample tracking system.
+This project is intended as a simple foundation that can be extended into a complete laboratory information or sample tracking system, and keeping digital record, with more seafty and fast retrival.
 
 ---
 
