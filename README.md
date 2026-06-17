@@ -1,4 +1,4 @@
-# 🔬 Laboratory Barcode Tracking Application
+# Laboratory Barcode Tracking Application
 
 A compact Java application for creating and reading laboratory sample barcodes. The system uses the ZXing barcode library to demonstrate how patient and sample information can be encoded into barcode images and later retrieved for laboratory workflows.
 
@@ -6,7 +6,7 @@ This project is intended as a simple foundation that can be extended into a comp
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 Laboratories often need a reliable method for identifying and tracking samples throughout testing procedures. This application provides a straightforward barcode workflow that allows sample information to be encoded into barcode images and decoded whenever the information needs to be retrieved.
 
@@ -20,7 +20,7 @@ The project focuses on:
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 ### Barcode Creation
 
@@ -56,7 +56,7 @@ The codebase is organized to allow future enhancements such as:
 
 ---
 
-## 🏗 Technology Stack
+## Technology Stack
 
 | Technology    | Purpose                                 |
 | ------------- | --------------------------------------- |
@@ -78,7 +78,7 @@ The current version is intentionally lightweight, but it can be expanded with:
 
 ---
 
-## 📂 Typical Workflow
+## Typical Workflow
 
 1. Enter sample information.
 2. Generate a barcode image.
@@ -89,7 +89,7 @@ The current version is intentionally lightweight, but it can be expanded with:
 
 ---
 
-## ⚙ Prerequisites
+## Prerequisites
 
 Before running the application, ensure the following software is installed:
 
@@ -107,7 +107,7 @@ git --version
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Clone the Repository
 
@@ -130,7 +130,7 @@ mvn test
 
 ---
 
-## 📦 Project Benefits
+## Project Benefits
 
 * Simple learning project for Java developers
 * Demonstrates practical use of the ZXing barcode library
@@ -140,7 +140,7 @@ mvn test
 
 ---
 
-## 🔮 Future Roadmap
+## Future Roadmap
 
 Potential improvements include:
 
@@ -154,18 +154,18 @@ Potential improvements include:
 
 ---
 
-## 📄 License
+## License
 
 This project is provided for educational and development purposes. It can be modified and extended according to project requirements.
 
 ---
 
-## 🤝 Contributions
+## Contributions
 
 Contributions, suggestions, and improvements are welcome. Feel free to fork the repository, submit pull requests, or adapt the project for your own laboratory workflow needs.
 
 ---
 
-## 📌 Summary
+## Summary
 
 The Laboratory Barcode Tracking Application demonstrates how Java and ZXing can be used to build a practical barcode solution for laboratory sample identification and tracking. Its lightweight architecture makes it suitable for learning, experimentation, and future expansion into a more comprehensive laboratory management platform.
