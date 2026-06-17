@@ -64,8 +64,6 @@ Small and medium-sized healthcare facilities seeking an affordable sample tracki
 
 ---
 
-# 2. System Description
-
 ## 2.1 System Context
 
 The application operates as a standalone desktop utility developed using Java and Maven.
@@ -99,8 +97,6 @@ Provide a simple command-line interface for executing operations.
 Support future integration with databases, user interfaces, and external systems.
 
 ---
-
-## 2.3 User Roles
 
 ### Laboratory Technician
 
