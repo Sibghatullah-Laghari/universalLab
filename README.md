@@ -1,89 +1,91 @@
 # Laboratory Barcode Tracking Application
 
-A compact Java application for creating and reading laboratory sample barcodes. The system uses the ZXing barcode library to demonstrate how patient and sample information can be encoded into barcode images and later retrieved for laboratory workflows.
+A lightweight Java application for generating and reading laboratory sample barcodes. Using the ZXing barcode library, the project demonstrates how laboratory information can be encoded into barcode images and later decoded for efficient sample identification and tracking.
 
-This project is intended as a simple foundation that can be extended into a complete laboratory information or sample tracking system, and keeping digital record, with more seafty and fast retrival.
+This project serves as a simple foundation that can evolve into a complete laboratory information or sample management system, helping maintain digital records while improving safety, organization, and fast data retrieval.
 
 ---
 
 ## Project Overview
 
-Laboratories often need a reliable method for identifying and tracking samples throughout testing procedures. This application provides a straightforward barcode workflow that allows sample information to be encoded into barcode images and decoded whenever the information needs to be retrieved.
+Laboratories require a dependable way to identify and monitor samples throughout the testing process. This application provides a basic barcode workflow that enables sample information to be encoded into barcode images and decoded whenever the original information needs to be accessed.
 
-The project focuses on:
+The project mainly focuses on:
 
-* Sample identification
-* Barcode generation
-* Barcode scanning and decoding
-* Easy integration into larger laboratory systems
-* Clean and maintainable Java code structure
+* Laboratory sample identification
+* Barcode image generation
+* Barcode decoding and scanning
+* Easy integration with larger laboratory applications
+* A clean and maintainable Java project structure
 
 ---
 
-## Key Features
+## Core Features
 
-### Barcode Creation
+### Barcode Generation
 
-Generate barcode images containing laboratory sample information using the ZXing library.
+Create barcode images containing laboratory sample information using the ZXing library.
 
 ### Barcode Decoding
 
-Read existing barcode images and extract the encoded sample data.
+Decode barcode images and recover the stored sample information.
 
-### Sample Metadata Support
+### Sample Information Support
 
-Barcode content can include details such as:
+Barcode data may contain details including:
 
 * Patient ID
 * Sample ID
-* Test Code or Test Name
-* Collection Date
-* Additional tracking information
+* Test code or test name
+* Collection date
+* Additional laboratory tracking information
 
-### Lightweight Design
+### Lightweight Implementation
 
-The application has minimal dependencies and can run on any system with Java installed.
+The application has very few dependencies and can run on any environment with Java installed.
 
-### Extensible Architecture
+### Extensible Design
 
-The codebase is organized to allow future enhancements such as:
+The project structure allows future enhancements such as:
 
-* Database integration
-* Desktop user interface
-* RESTful APIs
-* Multi-user sample management
-* Cloud-based laboratory services
+* Database connectivity
+* Desktop graphical interfaces
+* REST API development
+* Multi-user laboratory management
+* Cloud-enabled laboratory services
 
 ---
 
 ## Technology Stack
 
-| Technology    | Purpose                                 |
-| ------------- | --------------------------------------- |
-| Java 17       | Core application development            |
-| Maven         | Dependency management and project build |
-| ZXing Library | Barcode generation and decoding         |
-| IntelliJ IDEA | Development environment                 |
+| Technology    | Purpose                                    |
+| ------------- | ------------------------------------------ |
+| Java 17       | Core application development               |
+| Maven         | Build automation and dependency management |
+| ZXing Library | Barcode generation and decoding            |
+| IntelliJ IDEA | Development environment                    |
 
-### Potential Future Enhancements
+---
 
-The current version is intentionally lightweight, but it can be expanded with:
+## Possible Future Enhancements
 
-* MySQL or PostgreSQL database support
-* JavaFX desktop interface
-* Swing-based GUI
-* Spring Boot REST APIs
-* User authentication and authorization
+Although the current version is intentionally simple, it can be extended with features such as:
+
+* MySQL or PostgreSQL database integration
+* JavaFX desktop application
+* Swing-based graphical interface
+* Spring Boot REST services
+* Authentication and authorization
 * Laboratory reporting modules
 
 ---
 
 ## Typical Workflow
 
-1. Enter sample information.
+1. Enter laboratory sample information.
 2. Generate a barcode image.
-3. Attach the barcode to the laboratory sample.
-4. Scan or load the barcode image when needed.
+3. Attach the barcode to the sample.
+4. Scan or load the barcode image whenever required.
 5. Decode the barcode.
 6. Retrieve the original sample information for processing or verification.
 
@@ -91,13 +93,13 @@ The current version is intentionally lightweight, but it can be expanded with:
 
 ## Prerequisites
 
-Before running the application, ensure the following software is installed:
+Before building the project, ensure the following software is installed:
 
-* JDK 17 or later
+* JDK 17 or newer
 * Maven 3.9+
 * Git
 
-Verify installation:
+Verify the installation using:
 
 ```bash
 java -version
@@ -116,13 +118,13 @@ git clone https://github.com/Sibghatullah-Laghari/universalLab.git
 cd universalLab
 ```
 
-### Build the Project
+### Build the Application
 
 ```bash
 mvn clean package
 ```
 
-### Run Tests
+### Execute Unit Tests
 
 ```bash
 mvn test
@@ -130,42 +132,42 @@ mvn test
 
 ---
 
-## Project Benefits
+## Project Advantages
 
-* Simple learning project for Java developers
-* Demonstrates practical use of the ZXing barcode library
-* Suitable as a starter template for laboratory management systems
-* Easy to customize for educational, research, or small business environments
-* Clean Maven project structure for future development
+* A simple Java project for learning barcode processing
+* Demonstrates practical usage of the ZXing library
+* Can serve as a starting point for laboratory management software
+* Easy to modify for educational, research, or small laboratory environments
+* Organized Maven project structure for future development
 
 ---
 
-## Future Roadmap
+## Development Roadmap
 
-Potential improvements include:
+Future versions may include:
 
-* Support for QR codes alongside traditional barcodes
-* Database-backed sample storage
-* Laboratory dashboard interface
-* Batch barcode generation
-* Barcode printing support
+* QR code support alongside traditional barcodes
+* Persistent database storage
+* Laboratory dashboard
+* Bulk barcode generation
+* Barcode printing functionality
 * Web-based sample tracking portal
-* Integration with laboratory information management systems (LIMS)
+* Integration with Laboratory Information Management Systems (LIMS)
 
 ---
 
 ## License
 
-This project is provided for educational and development purposes. It can be modified and extended according to project requirements.
+This project is intended for educational and development purposes. It may be modified, extended, and adapted according to individual project requirements.
 
 ---
 
 ## Contributions
 
-Contributions, suggestions, and improvements are welcome. Feel free to fork the repository, submit pull requests, or adapt the project for your own laboratory workflow needs.
+Suggestions, improvements, and contributions are always welcome. Feel free to fork the repository, submit pull requests, or customize the project for your own laboratory workflow.
 
 ---
 
-## Summary
+## Conclusion
 
-The Laboratory Barcode Tracking Application demonstrates how Java and ZXing can be used to build a practical barcode solution for laboratory sample identification and tracking. Its lightweight architecture makes it suitable for learning, experimentation, and future expansion into a more comprehensive laboratory management platform.
+The Laboratory Barcode Tracking Application demonstrates how Java and the ZXing library can be used to implement a practical barcode solution for laboratory sample identification and tracking. Its lightweight design makes it suitable for learning, experimentation, and as a solid foundation for building more advanced laboratory management applications in the future.
