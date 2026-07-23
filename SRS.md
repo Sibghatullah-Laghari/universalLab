@@ -30,23 +30,23 @@ Capabilities such as database integration, graphical user interfaces, authentica
 
 ## 1.3 Intended Users
 
-This application is intended for a variety of users.
+This application is intended for a variety of users..
 
 ### Software Developers
 
-Developers who want to explore Java application development, barcode processing, and Maven-based project organization.
+Developers who want to explore Java application development, barcode processing, and Maven-based project organization..
 
 ### Students
 
-Students studying computer science, software engineering, healthcare informatics, or related disciplines.
+Students studying computer science, software engineering, healthcare informatics, or related disciplines..
 
 ### Freelancers
 
-Independent developers building customized laboratory or healthcare software solutions.
+Independent developers building customized laboratory or healthcare software solutions..
 
 ### Laboratories and Clinics
 
-Small and medium-sized laboratories seeking an affordable and straightforward sample identification solution.
+Small and medium-sized laboratories seeking an affordable and straightforward sample identification solution..
 
 ---
 
