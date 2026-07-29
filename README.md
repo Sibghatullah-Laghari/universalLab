@@ -46,7 +46,7 @@ The application requires only a small number of dependencies and can run in any 
 
 ### Expandable Design
 
-The project can be extended with additional capabilities including:
+The project can be extended with additional capabilities including:-
 
 * Database integration
 * Desktop user interfaces
