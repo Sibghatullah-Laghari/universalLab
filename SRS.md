@@ -16,7 +16,7 @@ The project serves both as an educational software engineering exercise and as a
 
 ## 1.2 Scope
 
-The current version focuses on the core barcode workflow and provides:
+The current version focuses on the core barcode workflow and provides:-
 
 * Barcode generation from laboratory sample data
 * Creation and storage of barcode images in PNG format
