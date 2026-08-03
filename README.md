@@ -164,7 +164,7 @@ This project is provided for educational and development purposes. It may be mod
 
 ## Contributions
 
-Community feedback and contributions are appreciated. Feel free to fork the repository, open pull requests, or adapt the project for your own laboratory workflows..
+Community feedback and contributions are appreciated. Feel free to fork the repository, open pull requests, or adapt the project for your own laboratory workflows.
 
 ---
 
