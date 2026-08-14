@@ -171,4 +171,4 @@ Community feedback and contributions are appreciated. Feel free to fork the repo
 ## Summary
 
 The Laboratory Barcode Tracking Application showcases how Java and the ZXing library can be combined to build a practical solution for laboratory sample identification and barcode processing. Its lightweight architecture makes it suitable for learning, experimentation, and as a foundation for more advanced laboratory management systems.
-
+.......
