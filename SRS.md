@@ -6,7 +6,7 @@
 
 # 1. Introduction
 
-## 1.1 Purpose
+## 1.1 Purpose:-
 
 The Universal Laboratory Barcode Tracking System is a lightweight Java-based application designed to simplify laboratory sample identification through barcode technology. It allows laboratory information to be encoded into barcode images and decoded later to retrieve the associated sample details.
 
